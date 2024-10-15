@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto  branco */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1e1e1e; /* Fundo escuro para o container */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 8px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #fff; /* Cor do título */
+  }
+  
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover; 
+    margin-bottom: 10px;
+    border: 3px solid #fff; /* Borda branca ao redor da imagem */
+  }
+  
+  .profile button {
+    margin-bottom: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .profile button:hover {
+    background-color: #555;
+  }
+  
+  textarea {
+    width: 300px;
+    height: 100px;
+    margin-bottom:20px;
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .output {
+    margin-top: 20px;
+  }
+  
+  .output h2 {
+    color: #fff; /* Cor do título da seçãode saída */
+  }
+  
+  .output p {
+    color: #ddd; /* Cor do texto da saída */
+  }

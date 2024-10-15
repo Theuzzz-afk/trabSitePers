@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title>Perfil da Pessoa Local</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+<h1>Davi César de Oliveira Leandro</h1>
+  <div class="profile">
+       <img id="profile-pic" src="default.jpg" alt="Foto do Perfil">
+    <button onclick="document.getElementById('file-input').click()">Trocar Foto</button>
+    <input type="file" id="file-input" style="display: none;" accept="image/*" onchange="changePhoto(event)">
+    <textarea id="info-text" placeholder="Digite informações sobre a pessoa aqui..."></textarea>
+  </div>
+  <button onclick="updateProfile()">Salvar</button>
+  <div class="output">
+    <h2>Informações do Perfil:</h2>
+    <p id="output-info"></p>
+  </div>
+  </div>
+  
+  <script>
+    function changePhoto(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        document.getElementById('profile-pic').src = e.target.result;
+      }
+    }
+    
+    reader.readAsDataURL(file);
+    
+    function updateProfile() {
+      const info = document.getElementById('info-text').value;
+      document.getElementById('output-info').innerText = info;
+    }
+  </script>
+  </body>
+</html>
